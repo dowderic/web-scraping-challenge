@@ -51,8 +51,8 @@ def scrape():
 
 	hemisphere_dictionary=[]
 
-	for row in range(4):
-    	browser4.visit(url4)
+	for row in range(4)
+		browser4.visit(url4)
     	html4=browser4.html
     	soup4 = bs(html4, 'html.parser')    
     	clicklinks = soup4.find('div',class_='description')
@@ -61,8 +61,8 @@ def scrape():
     	image_url = f"https://astrogeology.usgs.gov/search/results?q=hemisphere+enhanced&k1=target&v1=Mars/{imglink}"
     	row_dictionary = {'title': imagetitle.text, 'img_url': image_url}
     	hemisphere_dictionary.append(row_dictionary)
-# return one Python dictionary containing all of the scraped data.
-   final_dict = {
+	# return one Python dictionary containing all of the scraped data.
+   	final_dict = {
         "news_title": news_titles,
         "news_p": para_texts,
         "featured_image_url": featured_image_url,
