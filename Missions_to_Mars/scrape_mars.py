@@ -61,4 +61,14 @@ def scrape():
     	image_url = f"https://astrogeology.usgs.gov/search/results?q=hemisphere+enhanced&k1=target&v1=Mars/{imglink}"
     	row_dictionary = {'title': imagetitle.text, 'img_url': image_url}
     	hemisphere_dictionary.append(row_dictionary)
+# return one Python dictionary containing all of the scraped data.
+   final_dict = {
+        "news_title": news_titles,
+        "news_p": para_texts,
+        "featured_image_url": featured_image_url,
+        "fact_table": str(tables),
+        "hemisphere_images": image_url
+    }
 
+
+    return final_dict
